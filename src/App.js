@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState } from "react";
+import "../src/App.css"
+import TodoList from "./ToDoList"
+
 
 function App() {
+  const [liVal,setliVal] = useState("");
+  const [listeItem, setlistItem]=useState([]);
+  const addChanges=(event)=>{
+    setliVal(event.target.value)
+  }
+  
+  const addToDo=()=>{
+    setlistItem([...listeItem,liVal])
+    setliVal("")
+  }
+  const remItem = ( id ) =>{
+    setlistItem(
+      listeItem.filter((arrItem, ind)=>{
+        return ind !==id;
+      }) 
+    )
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-page">
+      <h1>What are you upto?</h1>
+      <div className="todo-tab">
+        <input placeholder="Add your note" onChange={addChanges} value={liVal}></input>
+        <button onClick={addToDo} className="addButton">+</button>
+        <ul>
+          {listeItem.map((val , ind )=>{
+           return( <TodoList item={val} id={ind} key={ind} onSelect={remItem}/>
+            )
+          })}
+        </ul>
+        </div>
+
+     
     </div>
   );
 }
