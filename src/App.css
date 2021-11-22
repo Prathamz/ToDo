@@ -1,0 +1,101 @@
+body{
+    background-color: #222831;
+    font-family: "Trirong", serif;
+}
+.main-page{
+    background-color: #EEEE;
+    margin: 2rem auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.todo-tab input{
+    direction: none;
+    width: 70%;
+    font-size: xx-large;
+    border-style: none;
+    border-bottom: 2px solid #222831;
+    font-weight: 500;
+    outline: none;
+    background: transparent;
+}
+.addButton{
+    direction: none;
+    font-size: xx-large;
+    background-color: #222831;
+    color: #EEEE;
+    border-radius: 20%;
+    outline: none;
+
+}
+.addButton:hover{
+    background-color: #EEEE;
+    color: #222831;
+}
+.todo-tab input:hover{
+    border-bottom: 2px solid #b398f3;
+}
+
+ul{
+    padding: 1rem 0;
+    margin: 1rem auto;
+    list-style: none;
+    text-align: left;
+    direction: none;
+    font-size: x-large;
+    background: transparent;
+}
+.listItems{
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    text-align: center;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+}
+.listItems button{
+    direction: none;
+    font-size: x-large;
+    background-color: #ac1c09ca;
+    color: #EEEE;
+    border-radius: 20%;
+    outline: none;
+}
+.listItems button:hover{
+    background-color: #EEEE;
+    color: #ac1c09ca;
+
+}
+.listItems li{
+    margin-left:1rem;
+}
+
+@media screen and (max-width: 495px){
+    h1{
+        font-size: x-large;
+    }
+    .main-page{
+        margin: 1rem auto;
+        width: 70%;
+        padding: 0.5rem;
+        border-radius: 10px;
+    }
+    .todo-tab input{
+        width: 70%;
+        font-size: large;
+        border-bottom: 2px solid #222831;
+        font-weight: 200;
+    }
+    .addButton{
+        font-size: x-large;
+    }
+    ul{
+        font-size: large;
+    }
+    .listItems button{
+        font-size: large;
+    }
+}
