@@ -27,7 +27,7 @@ body{
     font-size: xx-large;
     background-color: #222831;
     color: #EEEE;
-    border-radius: 20%;
+    border-radius: 50%;
     outline: none;
 
 }
@@ -61,7 +61,6 @@ ul{
     font-size: x-large;
     background-color: #ac1c09ca;
     color: #EEEE;
-    border-radius: 20%;
     outline: none;
 }
 .listItems button:hover{
@@ -79,23 +78,25 @@ ul{
     }
     .main-page{
         margin: 1rem auto;
-        width: 70%;
+        width: 85%;
         padding: 0.5rem;
         border-radius: 10px;
     }
     .todo-tab input{
         width: 70%;
-        font-size: large;
+        font-size: medium;
         border-bottom: 2px solid #222831;
         font-weight: 200;
     }
     .addButton{
-        font-size: x-large;
+        font-size: large;
+        border-radius: 50%;
+        height: 40px;
     }
     ul{
-        font-size: large;
+        font-size: medium;
     }
     .listItems button{
-        font-size: large;
+        font-size:medium;
     }
 }
